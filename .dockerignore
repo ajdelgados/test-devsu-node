@@ -127,3 +127,13 @@ dist
 
 # environment variables
 .env
+
+# Test
+index.test.js
+.babelrc
+
+# Dockerfile
+Dockerfile
+
+#README
+README.md
