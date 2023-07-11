@@ -135,5 +135,8 @@ index.test.js
 # Dockerfile
 Dockerfile
 
-#README
+# README
 README.md
+
+# Hidden files and folders
+.*
