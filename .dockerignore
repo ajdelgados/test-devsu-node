@@ -140,3 +140,6 @@ README.md
 
 # Hidden files and folders
 .*
+
+# Helm
+helm/*
