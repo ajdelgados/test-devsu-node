@@ -25,10 +25,9 @@ serviceAccount:
   name: ""
 
 configMapValues:
-  database_name: "./dev.sqlite"
-  database_user: "user"
-  database_password: "password"
-  port: 8080
+  DATABASE_NAME: "./dev.sqlite"
+  DATABASE_USER: "user"
+  PORT: 8080
 
 podAnnotations: {}
 
