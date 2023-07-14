@@ -1,8 +1,8 @@
-import { Sequelize } from 'sequelize'
+import { Sequelize } from 'sequelize';
 
 const sequelize = new Sequelize('test-db', process.env.DATABASE_USER, process.env.DATABASE_PASSWORD, {
   dialect: 'sqlite',
-  host: process.env.DATABASE_NAME
-})
+  host: process.env.DATABASE_NAME,
+});
 
-export default sequelize
+export default sequelize;

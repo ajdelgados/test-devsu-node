@@ -26,6 +26,8 @@ jobs:
         run: npm install
       - name: Unit tests
         run: CI=true npm test
+      - name: Static Code analysis
+        run: npm run lint
 
   build:
     needs: test

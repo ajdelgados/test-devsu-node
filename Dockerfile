@@ -9,4 +9,4 @@ RUN npm ci --only=production
 
 USER node
 
-CMD "node" "index.js"
+CMD "node" "--es-module-specifier-resolution=node" "index.js"
