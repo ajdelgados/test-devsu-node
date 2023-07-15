@@ -24,7 +24,7 @@ jobs:
           cache: 'npm'
       - name: Install packages
         run: npm install
-      - name: Unit tests
+      - name: Unit tests and Code Coverage
         run: CI=true npm test
       - name: Static Code analysis
         run: npm run lint

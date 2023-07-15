@@ -6,12 +6,20 @@
   "type": "module",
   "scripts": {
     "start": "node --es-module-specifier-resolution=node --require dotenv/config index.js",
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint ."
   },
   "jest": {
     "transform": {
       "^.+\\.js?$": "babel-jest"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
     }
   },
   "author": "Devsu",
