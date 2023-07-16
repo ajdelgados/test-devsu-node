@@ -3,6 +3,7 @@ import sequelize from './shared/database/database';
 import { usersRouter } from './users/router';
 
 const app = express();
+app.disable('x-powered-by');
 const PORT = process.env.PORT || 8000;
 
 sequelize.sync({ force: true }).then(() => console.log('db is ready'));
