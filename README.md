@@ -32,6 +32,8 @@ El job hace los test unitarios, coverage y static code analysis con [Jest](https
 
 [Docker Hub](https://hub.docker.com/) se usa como container registry y se crea el Dockerfile con el .dockerignore. En el Dockerfile se usa la imagen Alpine y se instalan solo las dependencias para producción haciendo la imagen lo más liviana posible. También se configura el usuario node, para no usar el usuario root y si el container se encuantra vulnerable, no exista riesgo es escalamiento de privilegios.
 
+El graceful shutdown se maneja en la aplicación luego de unos ajustes en el index.js, así que se cierra el servicio web y luego la conexión a base de datos. También se creo un nuevo endpoint /health para hacer el chequeo del liveness y readiness de los pods en Kubernetes.
+
 ## Deploy
 
 Helm es el template manager para deplegar en Kubernetes en el proyecto, se creo el directorio helm dentro del repositorio con las configuraciones básicas en el values.yaml. Se usó ngrok para exponer el kube-apiserver del local.
